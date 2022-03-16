@@ -1,0 +1,39 @@
+<div class="form-label-group">
+
+    <label for="{{label}}">{{label}}</label>
+
+    <input 
+    [ngClass]="(controlDir && controlDir.control  && controlDir.control.touched) 
+                ? !controlDir.control.valid ? 'is-invalid' : 'is-valid' : null"  
+    [type]="type" 
+    (input)="onChange($event.target.value)"
+    (blur)="onTouched()"
+    id="{{label}}" 
+    #input
+    class="form-control"
+    placeholder="{{label}}"    
+    >
+
+<div  class="fa fa-spinner fa-spin loader"
+            *ngIf="controlDir 
+                && controlDir.control 
+                && controlDir.control.status ==='PENDING'">
+</div>
+
+    <div class="invalid-feedback"
+    *ngIf="(controlDir && controlDir.control && 
+            !controlDir.control.valid && controlDir.control.touched)"        
+    >
+        <span *ngIf="controlDir.control.errors?.required">{{label}} gerekli..</span>
+        <span *ngIf="controlDir.control.errors?.pattern">Geçersiz mail..</span> 
+      
+    </div>
+
+    <div class="invalid-feedback d-block" 
+        *ngIf="(controlDir && controlDir.control && 
+        !controlDir.control.valid && controlDir.control.dirty)"        
+>  <span *ngIf="controlDir.control.errors?.emailExists">Kullanılan  mail..</span>     
+
+    </div>
+
+</div>

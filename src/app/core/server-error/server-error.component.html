@@ -1,0 +1,37 @@
+
+<div class="container mt-5">
+    <h1>Sunucu kaynaklı hata...</h1>
+    <h4>
+        Sayfa yenileme hatayı görünmez yapacaktır...
+    </h4>
+
+    <ng-container *ngIf="error">
+
+        <h5 class="text-danger"> Hata: {{ error.message }} </h5>
+        <p class="font-weight-bold">
+            Not: Eğer bu hatayı görüyorsanız muhtemelen istemci tarafı kaynaklı değildir
+        </p>
+
+        <p>
+            Ne yapılabilir?
+        </p>
+
+        <ol>
+            <li> Tarayıcının geliştirme seçeneklerine bakın</li>
+            <li> Network sekmesini inceleyin</li>
+            <li> İstek hatası olabilir</li>
+            <li> İstek URLsini kontrol edin</li>
+            <li> Postman üzerinden deneme yapın..</li>
+            
+            
+        </ol>
+
+        <p>Stack trace - işlem listesini araştırın</p>
+        <code class="mt5" style="background-color: whitesmoke;">
+            {{  error.details }}
+        </code>
+
+    </ng-container>
+</div>
+
+

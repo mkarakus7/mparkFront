@@ -1,0 +1,39 @@
+<div class="bg-light px-4 py-3 text-uppercase font-weight-bold">
+Sipariş özeti
+</div>
+<div class="p-4">
+    <p class="font-italic mb-4">
+        Kargo ücreti daha sonra eklenecektir.. </p>
+        <ul class="list-unstyled mb-4" 
+            *ngIf="(basketTotal$ | async) as totals">
+
+            <li class="d-flex justify-content-between py-3 border-bottom">
+                <strong class="text-muted">
+                    Sipariş alt toplamı
+                </strong>
+                <strong>
+                  {{ totals.subtotal | currency }}
+                </strong>
+            </li>
+
+            <li class="d-flex justify-content-between py-3 border-bottom">
+                <strong class="text-muted">
+                    Kargo ve paketleme
+                </strong>
+                <strong>
+                  {{ totals.shipping | currency}}
+                </strong>
+            </li>
+
+            <li class="d-flex justify-content-between py-3 border-bottom">
+                <strong class="text-muted">
+                    Net toplam
+                </strong>
+                <strong>
+                  {{ totals.total | currency}}
+                </strong>
+            </li>
+
+        </ul>
+   
+</div>

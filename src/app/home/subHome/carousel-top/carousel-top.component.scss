@@ -1,0 +1,29 @@
+.slide-div {
+   // width: 200px;
+    height: 200px;
+    overflow: hidden;
+    /* Magic */
+    display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    box-shadow: inset 20px -20px 20px 20px rgba(0,0,0,1);
+}
+
+img {
+  //  max-width: 100%;
+ // position: relative;
+  z-index: -1;
+  -webkit-border-radius: 40%;
+  -moz-border-radius: 40%;
+  border-radius: 40%;
+ // display: block; /* ADDED */
+}
+
+.logodiv {
+  margin-left: 100px;
+    margin-top: 12px;
+    z-index: 1;
+    position: absolute;
+    background-color: black;
+   box-shadow: 0px 0px 20px 20px rgba(0,0,0,1);
+}
