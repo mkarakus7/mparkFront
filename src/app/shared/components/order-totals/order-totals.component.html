@@ -1,18 +1,18 @@
-<div class="bg-light px-4 py-3 text-uppercase font-weight-bold">
+<div class="bg-light px-4 text-uppercase font-weight-bold" style="padding: 1.20em;">
 Sipariş özeti
 </div>
 <div class="p-4">
     <p class="font-italic mb-4">
         Kargo ücreti daha sonra eklenecektir.. </p>
         <ul class="list-unstyled mb-4" 
-            *ngIf="(basketTotal$ | async) as totals">
+           >
 
             <li class="d-flex justify-content-between py-3 border-bottom">
                 <strong class="text-muted">
                     Sipariş alt toplamı
                 </strong>
                 <strong>
-                  {{ totals.subtotal | currency }}
+                  {{ subtotal | currency }}
                 </strong>
             </li>
 
@@ -21,7 +21,7 @@ Sipariş özeti
                     Kargo ve paketleme
                 </strong>
                 <strong>
-                  {{ totals.shipping | currency}}
+                  {{ shippingPrice | currency}}
                 </strong>
             </li>
 
@@ -30,7 +30,7 @@ Sipariş özeti
                     Net toplam
                 </strong>
                 <strong>
-                  {{ totals.total | currency}}
+                  {{ total | currency}}
                 </strong>
             </li>
 

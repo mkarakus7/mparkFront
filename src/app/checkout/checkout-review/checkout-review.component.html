@@ -1,5 +1,7 @@
 <div class="mt-4">
-    <app-basket-summary [isBasket]="false"></app-basket-summary>
+    <app-basket-summary [isBasket]="false"
+        [items]="(basket$|async).items"
+    ></app-basket-summary>
 
 </div>
 
@@ -10,7 +12,7 @@
         <i class="fa fa-angle-left"></i> kargoya  dön
     </button>
 
-    <button class="btn.btn-primary" cdkStepperNext> 
+    <button class="btn.btn-primary" (click)="createPaymentIntent()"> 
         ödemeye geç  <i class="fa fa-angle-right"></i> 
     </button>
 

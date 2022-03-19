@@ -15,6 +15,7 @@ import { FooterSocialMediaComponent } from './subhome/footer-social-media/footer
 import { FooterMobileAppComponent } from './subhome/footer-mobile-app/footer-mobile-app.component';
 import { CenterAllianceComponent } from './subhome/center-alliance/center-alliance.component';
 import { CenterBrandsComponent } from './subhome/center-brands/center-brands.component';
+import { CenterMapComponent } from './subhome/center-map/center-map.component';
 
 
 
@@ -33,7 +34,8 @@ import { CenterBrandsComponent } from './subhome/center-brands/center-brands.com
     FooterSocialMediaComponent,
     FooterMobileAppComponent,
     CenterAllianceComponent,
-    CenterBrandsComponent
+    CenterBrandsComponent,
+    CenterMapComponent
   ],
   imports: [
     CommonModule,
